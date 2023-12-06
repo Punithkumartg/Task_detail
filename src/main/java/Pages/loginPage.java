@@ -17,4 +17,22 @@ public class loginPage {
         page.getByRole(AriaRole.LINK,new Page.GetByRoleOptions()
                 .setName("Sign in using Microsoft")).click();
     }
+    public void enterUsername(String username){
+        page.getByPlaceholder("Email or phone").fill(username);
+    }
+    public void clickOnNextBtn(){
+        page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions()
+                .setName("Next")).click();
+    }
+    public void enterPassword(String password){
+        page.getByPlaceholder("Password").fill(password);
+    }
+    public void clickOnSigninBtn(){
+        page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions()
+                .setName("Sign in")).click();
+    }
+    public void clickOnYesBtn(){
+        page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions()
+                .setName("Yes")).click();
+    }
 }
