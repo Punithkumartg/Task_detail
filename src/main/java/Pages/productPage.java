@@ -16,5 +16,9 @@ public class productPage {
     public void navigateToProductPage(){
         page.getByRole(AriaRole.LINK,new Page.GetByRoleOptions()
                 .setName("Products").setExact(true)).click();
+        /*
+
+         */
+
     }
 }
