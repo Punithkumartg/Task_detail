@@ -43,12 +43,12 @@ public class armocodescripts extends testBase {
         loginpage.enterPassword(properties.getProperty("password"));
         loginpage.clickOnSigninBtn();
         loginpage.clickOnYesBtn();
-//        PlaywrightAssertions.assertThat(page)
-//                .hasTitle("ArmorCode Inc - Application Security Orchestration and Collaboration platform");
+        PlaywrightAssertions.assertThat(page)
+                .hasTitle("ArmorCode Inc - Application Security Orchestration and Collaboration platform");
     }
 
-    @Test(description = "Navigate to Prducts page then verify " +
-            "product page is displaed",
+    @Test(description = "Navigate to poducts page then verify " +
+            "all the elements is displayed",
             priority = 1)
     public void navigateToProductPage(){
         productpage.navigateToProductPage();
