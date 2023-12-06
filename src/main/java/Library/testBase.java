@@ -50,4 +50,7 @@ public class testBase {
     protected BrowserContext getContext() {
         return context;
     }
+    protected Properties getProperties(){
+        return properties;
+    }
 }
