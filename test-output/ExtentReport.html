@@ -44,6 +44,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -53,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 7, 2023 03:53:01 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 7, 2023 05:02:15 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +70,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -121,10 +123,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -161,14 +163,14 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>logintoApplication</span>
-						<span class='test-time'>Dec 7, 2023 03:53:16 PM</span>
+						<span class='test-time'>Dec 7, 2023 05:02:27 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 7, 2023 03:53:16 PM</span>
-	<span class='label end-time'>Dec 7, 2023 03:53:16 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+11ms</span>
+	<span class='label start-time'>Dec 7, 2023 05:02:27 PM</span>
+	<span class='label end-time'>Dec 7, 2023 05:02:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
 </div>
 <div class='test-attributes'>
 	<div class='category-list'>
@@ -187,7 +189,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:53:25 PM</td>
+				<td class='timestamp'>5:02:35 PM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -200,8 +202,8 @@
 	<li class='node level-1 leaf pass' status='pass' test-id='2'>
 		<div class='collapsible-header'>
 			<div class='node-name'>maddy</div>
-			<span class='node-time'>Dec 7, 2023 03:53:16 PM</span>
-			&middot; <span class='node-duration'>0h 0m 0s+11ms</span>
+			<span class='node-time'>Dec 7, 2023 05:02:27 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+1ms</span>
 			<span class='test-status right pass'>pass</span>
 		</div>
 		<div class='collapsible-body'>
@@ -217,7 +219,7 @@
 					<tbody>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>3:53:16 PM</td>
+							<td class='timestamp'>5:02:27 PM</td>
 							<td class='step-details'>
 									<table class='runtime-table table-striped table'><tr><td>Browser</td><td></td></tr><tr><td>Pass Percentage</td><td>0.00%</td></tr><tr><td>Fail Percentage</td><td>0.00%</td></tr></table>
 								
@@ -234,13 +236,13 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>navigateToProductPage</span>
-						<span class='test-time'>Dec 7, 2023 03:53:25 PM</span>
+						<span class='test-time'>Dec 7, 2023 05:02:35 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 7, 2023 03:53:25 PM</span>
-	<span class='label end-time'>Dec 7, 2023 03:53:25 PM</span>
+	<span class='label start-time'>Dec 7, 2023 05:02:35 PM</span>
+	<span class='label end-time'>Dec 7, 2023 05:02:35 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
 </div>
 <div class='test-attributes'>
@@ -260,7 +262,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:53:35 PM</td>
+				<td class='timestamp'>5:02:47 PM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -273,7 +275,7 @@
 	<li class='node level-1 leaf pass' status='pass' test-id='4'>
 		<div class='collapsible-header'>
 			<div class='node-name'>maddy</div>
-			<span class='node-time'>Dec 7, 2023 03:53:25 PM</span>
+			<span class='node-time'>Dec 7, 2023 05:02:35 PM</span>
 			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
 			<span class='test-status right pass'>pass</span>
 		</div>
@@ -290,7 +292,7 @@
 					<tbody>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>3:53:25 PM</td>
+							<td class='timestamp'>5:02:35 PM</td>
 							<td class='step-details'>
 									<table class='runtime-table table-striped table'><tr><td>Browser</td><td></td></tr><tr><td>Pass Percentage</td><td>33.33%</td></tr><tr><td>Fail Percentage</td><td>0.00%</td></tr></table>
 								
@@ -304,16 +306,16 @@
 </ul>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='5'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>createProducts</span>
-						<span class='test-time'>Dec 7, 2023 03:53:35 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Dec 7, 2023 05:02:47 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 7, 2023 03:53:35 PM</span>
-	<span class='label end-time'>Dec 7, 2023 03:53:35 PM</span>
+	<span class='label start-time'>Dec 7, 2023 05:02:47 PM</span>
+	<span class='label end-time'>Dec 7, 2023 05:02:47 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
 </div>
 <div class='test-attributes'>
@@ -331,11 +333,61 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:53:35 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:03:17 PM</td>
 				<td class='step-details'>
-						Test passed
+						Test failed
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:03:17 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">com.microsoft.playwright.TimeoutError: Timeout 30000ms exceeded
+	at com.microsoft.playwright.impl.WaitableTimeout.get(WaitableTimeout.java:41)
+	at com.microsoft.playwright.impl.WaitableRace.get(WaitableRace.java:44)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.PageImpl.waitForEventWithTimeout(PageImpl.java:491)
+	at com.microsoft.playwright.impl.PageImpl.waitForPopupImpl(PageImpl.java:459)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForPopup$4(PageImpl.java:452)
+	at com.microsoft.playwright.impl.WaitForEventLogger.lambda$get$0(WaitForEventLogger.java:50)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.WaitForEventLogger.get(WaitForEventLogger.java:41)
+	at com.microsoft.playwright.impl.ChannelOwner.withWaitLogging(ChannelOwner.java:82)
+	at com.microsoft.playwright.impl.PageImpl.waitForPopup(PageImpl.java:452)
+	at com.microsoft.playwright.Page.waitForPopup(Page.java:7408)
+	at testPrograms.ac_productTestScripts.createProducts(ac_productTestScripts.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
 					
 				</td>
 			</tr>
@@ -346,7 +398,7 @@
 	<li class='node level-1 leaf pass' status='pass' test-id='6'>
 		<div class='collapsible-header'>
 			<div class='node-name'>maddy</div>
-			<span class='node-time'>Dec 7, 2023 03:53:35 PM</span>
+			<span class='node-time'>Dec 7, 2023 05:02:47 PM</span>
 			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
 			<span class='test-status right pass'>pass</span>
 		</div>
@@ -363,7 +415,7 @@
 					<tbody>
 						<tr class='log' status='info'>
 							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-							<td class='timestamp'>3:53:35 PM</td>
+							<td class='timestamp'>5:02:47 PM</td>
 							<td class='step-details'>
 									<table class='runtime-table table-striped table'><tr><td>Browser</td><td></td></tr><tr><td>Pass Percentage</td><td>66.67%</td></tr><tr><td>Fail Percentage</td><td>0.00%</td></tr></table>
 								
@@ -419,13 +471,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>maddy</span>
 						<span class='category-status right'>
-						<span class='label pass'>3</span>
+						<span class='label pass'>2</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -439,19 +492,19 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 7, 2023 03:53:16 PM</td>
+										<td>Dec 7, 2023 05:02:27 PM</td>
 										<td class='linked' test-id='1'>logintoApplication</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 7, 2023 03:53:25 PM</td>
+										<td>Dec 7, 2023 05:02:35 PM</td>
 										<td class='linked' test-id='3'>navigateToProductPage</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 7, 2023 03:53:35 PM</td>
+										<td>Dec 7, 2023 05:02:47 PM</td>
 										<td class='linked' test-id='5'>createProducts</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -467,7 +520,104 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>com.microsoft.playwright.TimeoutError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 7, 2023 05:02:47 PM</td>
+										<td class='linked' test-id='5'>createProducts</td>
+										<td>
+											<textarea disabled class="code-block">com.microsoft.playwright.TimeoutError: Timeout 30000ms exceeded
+	at com.microsoft.playwright.impl.WaitableTimeout.get(WaitableTimeout.java:41)
+	at com.microsoft.playwright.impl.WaitableRace.get(WaitableRace.java:44)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.PageImpl.waitForEventWithTimeout(PageImpl.java:491)
+	at com.microsoft.playwright.impl.PageImpl.waitForPopupImpl(PageImpl.java:459)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForPopup$4(PageImpl.java:452)
+	at com.microsoft.playwright.impl.WaitForEventLogger.lambda$get$0(WaitForEventLogger.java:50)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.WaitForEventLogger.get(WaitForEventLogger.java:41)
+	at com.microsoft.playwright.impl.ChannelOwner.withWaitLogging(ChannelOwner.java:82)
+	at com.microsoft.playwright.impl.PageImpl.waitForPopup(PageImpl.java:452)
+	at com.microsoft.playwright.Page.waitForPopup(Page.java:7408)
+	at testPrograms.ac_productTestScripts.createProducts(ac_productTestScripts.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -487,19 +637,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 7, 2023 03:53:01 PM</div>
+					<div class='panel-lead'>Dec 7, 2023 05:02:15 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 7, 2023 03:53:35 PM</div>
+			 		<div class='panel-lead'>Dec 7, 2023 05:03:17 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 33s+545ms</div>
+					<div class='panel-lead'>0h 1m 1s+802ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -516,11 +666,11 @@
 						</tr>
 						<tr>
 							<td>maddy</td>
-							<td>3</td>
-							<td>0</td>
+							<td>2</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									100%
+									66.667%
 							</td>
 						</tr>
 					</table>
@@ -535,13 +685,13 @@
 		<script>
 			var statusGroup = {
                 parentCount: 3,
-				passParent: 3,
-				failParent: 0,
+				passParent: 2,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 3,
 				passChild: 3,
 				failChild: 0,
@@ -566,7 +716,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "logintoApplication":0.011,"navigateToProductPage":0,"createProducts":0
+			        "logintoApplication":0.001,"navigateToProductPage":0,"createProducts":0
 			};
 		</script>
 	

@@ -68,13 +68,11 @@ public class ac_productTestScripts extends testBase {
     @Test(description = "Verfy user is able to create products",
             priority = 2)
     public void createProducts() {
-
-//        Page page1 = page.waitForPopup(() -> {
-//            Page popupPage = context.pages().get(context.pages().size() - 1);
-//            productpage.clickOnAddNewProductBtn();
-//        });
-//        productpage = new productPage(page1);
-//        productpage.enterProdctName("madhu");
-//    }
+        Page page1 = page.waitForPopup(() -> {
+            Page popupPage = context.pages().get(context.pages().size() - 1);
+            productpage.clickOnAddNewProductBtn();
+        });
+        productpage = new productPage(page1);
+        productpage.enterProdctName("madhu");
     }
 }
