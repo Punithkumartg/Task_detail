@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <listeners>
+        <listener class-name="customListener.Listener"/>
+    </listeners>
+    <test name="timexTests">
+        <classes>
+            <class name="testPrograms.ac_productTestScripts"/>
+        </classes>
+    </test>
+</suite>
