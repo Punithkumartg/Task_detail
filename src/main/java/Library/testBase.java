@@ -38,6 +38,8 @@ public class testBase {
 
     @AfterSuite
     public void tearDownApplication() {
+        page.close();
+        context.close();
         browser.close();
     }
 

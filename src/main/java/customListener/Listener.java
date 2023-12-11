@@ -5,17 +5,11 @@ import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.*;
 import com.itextpdf.html2pdf.HtmlConverter;
-import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.lowagie.text.DocumentException;
-import org.codehaus.groovy.control.CompilationFailedException;
 import org.testng.*;
-import org.xhtmlrenderer.pdf.ITextRenderer;
 import com.itextpdf.text.*;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class Listener implements ITestListener {
 
@@ -38,6 +32,7 @@ public class Listener implements ITestListener {
             extent.attachReporter(extentsparkreporter);
         }
         return extent;
+
     }
 
     @Override
@@ -110,7 +105,6 @@ public class Listener implements ITestListener {
              FileOutputStream pdfFileStream = new FileOutputStream(new File(pdfPath))) {
             if (htmlFileStream.available() > 0) {
                 HtmlConverter.convertToPdf(htmlFileStream, pdfFileStream);
-                System.out.println("HTML report converted to PDF successfully: " + pdfPath);
             } else {
                 System.out.println("HTML file is empty. No PDF generated.");
             }
