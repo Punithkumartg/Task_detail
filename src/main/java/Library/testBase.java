@@ -13,16 +13,18 @@ public class testBase {
     private BrowserContext context;
     private Page page;
     private propertyReader propertyreader;
-    private Properties properties;
+    private Properties configproperties;
+    private Properties productproperties;
 
     Playwright playwright = Playwright.create();
 
     @BeforeSuite
     public void launchApplication() {
         propertyreader = new propertyReader();
-        properties = propertyreader.readConfigProperty();
-        String URL = properties.getProperty("Application_URL");
-        String browsertolaunch = properties.getProperty("browser");
+        configproperties = propertyreader.readConfigProperty();
+        productproperties = propertyreader.readProductProperty();
+        String URL = configproperties.getProperty("Application_URL");
+        String browsertolaunch = configproperties.getProperty("browser");
 
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                 .setHeadless(false)
@@ -36,6 +38,8 @@ public class testBase {
 
     @AfterSuite
     public void tearDownApplication() {
+        page.close();
+        context.close();
         browser.close();
     }
 
@@ -50,7 +54,10 @@ public class testBase {
     protected BrowserContext getContext() {
         return context;
     }
-    protected Properties getProperties(){
-        return properties;
+    protected Properties getcofigProperties(){
+        return configproperties;
+    }
+    protected Properties getProductproperties(){
+        return productproperties;
     }
 }
