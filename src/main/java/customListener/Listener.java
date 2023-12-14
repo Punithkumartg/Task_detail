@@ -49,7 +49,9 @@ public class Listener implements ITestListener {
         test.log(Status.FAIL, "Class: " + result.getTestClass().getName());
         test.log(Status.FAIL, "Method: " + result.getMethod().getMethodName());
         test.log(Status.FAIL, "Timestamp: " + result.getEndMillis());
+        /*
 
+         */
     }
 
     @Override
