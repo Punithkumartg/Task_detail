@@ -1,7 +1,9 @@
 package Library;
 
 import com.microsoft.playwright.*;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import utils.propertyReader;
 
@@ -18,7 +20,7 @@ public class testBase {
 
     Playwright playwright = Playwright.create();
 
-    @BeforeSuite
+    @BeforeClass
     public void launchApplication() {
         propertyreader = new propertyReader();
         configproperties = propertyreader.readConfigProperty();
@@ -36,7 +38,7 @@ public class testBase {
         page.navigate(URL);
     }
 
-    @AfterSuite
+    @AfterClass
     public void tearDownApplication() {
         page.close();
         context.close();

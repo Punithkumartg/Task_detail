@@ -42,7 +42,6 @@ public class ac_productTestScripts extends testBase {
         productpage = new productPage(page);
     }
 
-    @ExtentReport(name = "maddy")
     @Test(testName = "Verify when user login with valid credentiasls" +
             "then Home page is displayed",
             priority = 0)
@@ -57,7 +56,7 @@ public class ac_productTestScripts extends testBase {
                 .hasTitle("ArmorCode Inc - Application Security Orchestration and Collaboration platform");
     }
 
-    @ExtentReport(name = "maddy")
+    @ExtentReport(name = "product")
     @Test(testName = "Navigate to poducts page then verify " +
             "all the elements is displayed",
             priority = 1)
@@ -69,7 +68,7 @@ public class ac_productTestScripts extends testBase {
                 productpage.verifyNewProductBtnDislplayed()).isVisible();
     }
 
-    @ExtentReport(name = "maddy")
+    @ExtentReport(name = "product")
     @Test(testName = "Verfy user is able to create products",
             priority = 2)
     public void createProducts() {
@@ -94,7 +93,7 @@ public class ac_productTestScripts extends testBase {
                 .hasText("playproduct");
     }
 
-    @ExtentReport(name = "maddy")
+    @ExtentReport(name = "product")
     @Test(testName = "Verify user is able to create Sub product",
             priority = 3)
     public void createSubProduct() {
@@ -118,7 +117,7 @@ public class ac_productTestScripts extends testBase {
         PlaywrightAssertions.assertThat(productpage.verifySubproductCreated()).isVisible();
     }
 
-    @ExtentReport(name = "maddy")
+    @ExtentReport(name = "product")
     @Test(testName = "Verify user is able to add new Dependency for the product",
             priority = 4)
     public void addNewDependency() {
@@ -133,7 +132,7 @@ public class ac_productTestScripts extends testBase {
         Assert.assertTrue(page.locator(".ant-message-notice-content").isVisible());
     }
 
-    @ExtentReport(name = "maddy")
+    @ExtentReport(name = "product")
     @Test(testName = "Verify user is able to delete added Dependency",
             priority = 5)
     public void deleteAddedDependency() {
@@ -142,7 +141,7 @@ public class ac_productTestScripts extends testBase {
         productpage.dependencyDeleteBtn();
     }
 
-    @ExtentReport(name = "maddy")
+    @ExtentReport(name = "product")
     @Test(testName = "verify user is able to delete added subproduct",
             priority = 6)
     public void deleteAddedSubproduct() {
@@ -151,7 +150,7 @@ public class ac_productTestScripts extends testBase {
         productpage.subproductDeleteBtn();
     }
 
-    @ExtentReport(name = "maddy")
+    @ExtentReport(name = "product")
     @Test(testName = "Verify user is able to delete added product",
             priority = 7)
     public void deleteAddedProduct() {

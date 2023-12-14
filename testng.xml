@@ -3,9 +3,9 @@
     <listeners>
         <listener class-name="customListener.Listener"/>
     </listeners>
-    <test name="timexTests">
+    <test name="product and Sub product tests">
         <classes>
-            <class name="testPrograms.ac_productTestScripts"/>
+            <class name="testPrograms.ac_subProductTestScripts"/>
         </classes>
     </test>
 </suite>

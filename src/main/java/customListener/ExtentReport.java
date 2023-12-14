@@ -11,6 +11,5 @@ import java.lang.annotation.Target;
 public @interface ExtentReport {
     String name() default "";
     String browser() default  "";
-
 }
 
