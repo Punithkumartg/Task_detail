@@ -163,7 +163,7 @@ else {
     }
     public void selectall_teams(){
         page.locator("Select All").click();
-        page.waitForTimeout(2000);
+
 
     }
 
