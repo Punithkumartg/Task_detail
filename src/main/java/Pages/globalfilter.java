@@ -166,6 +166,11 @@ else {
 
 
     }
+    public void selctall_teir(){
+
+
+
+    }
 
 
 
