@@ -118,8 +118,8 @@ else {
             }
         }
     public void subprd(){
+    page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Subproducts") ).click();
 
-        page.locator("ant-collapse-header").click();
 
     }
     public void team(){
@@ -161,15 +161,47 @@ else {
             check.nth(i).click();
         }
     }
-    public void selectall_teams(){
-        page.locator("Select All").click();
+    public void selectalloption(){
 
-
+    Locator selectall=page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Select All"));
+         if (selectall!=null){
+             selectall.click();
+             System.out.println("select all option clicked");
+             page.waitForTimeout(2000);
+         }else {
+             System.out.println("select is not clicked");
+         }
+    }
+    public void clearalloption(){
+       Locator clear=page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Clear All") );
+       if (clear!=null){
+           clear.click();
+           page.waitForTimeout(2000);
+           System.out.println("clear all option clicked");
+       }else {
+           System.out.println("clear all is not selected");
+       }
+    }
+    public void apply_button(){
+        page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Apply")).click();
+        page.waitForTimeout(2000);
+    }
+    public void catagory(){
+       // page.locator("ant-select-selection-placeholder").click();
+       // page.waitForSelector("ant-select-selection-placeholder", new Page.WaitForSelectorOptions().setTimeout(10000)).click();
+        page.locator("div:nth-child(4) > div:nth-child(2) > .ant-select > .ant-select-selector").click();
     }
 
+    public void applocation(){
+       // page.getByText("ant-select-item-option-content", new Page.GetByTextOptions().setExact(true)).nth(1).click();
+        page.getByTitle("Application").locator("div").click();
 
+    }
+    public void infrastructure(){
+        page.getByText("Infrastructure").click();
+        page.waitForTimeout(2000);
 
-
+    }
 
 
 

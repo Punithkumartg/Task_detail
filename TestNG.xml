@@ -2,6 +2,7 @@
 <suite name="MyTestSuite">
     <listeners>
         <listener class-name="customListener.Listener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
     </listeners>
     <test name="armor code">
         <classes>

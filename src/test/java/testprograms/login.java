@@ -72,10 +72,7 @@ public class login extends testBase {
          page.waitForTimeout(1000);
          globelfilter.selecbu1();
          page.waitForTimeout(1000);
-
-
     }
-
     @Test(description = "Select any BU1 and defaculte business unit from the dropdown.",priority = 5)
     public void dorpdowds(){
         globelfilter.dropdown();
@@ -83,8 +80,6 @@ public class login extends testBase {
         globelfilter.selectb2();
         globelfilter.dropdown();
         globelfilter.select3();
-
-
     }
     @Test(description = "verifiying the subprodut option",priority = 6)
     public void subprd(){
@@ -100,13 +95,32 @@ public class login extends testBase {
            globelfilter.team();
            globelfilter.checkboxteams();
            page.waitForTimeout(2000);
-           globelfilter.selectall_teams();
+           globelfilter.selectalloption();
+           globelfilter.clearalloption();
+    }
+    @Test(description ="Check for tire under groupby after selecting products.",priority = 8)
+     public void tire(){
+        globelfilter.tire();
+        globelfilter.checkboxteams();
+        globelfilter.selectalloption();
+        globelfilter.clearalloption();
+    }
+     @Test(description ="Check for none under groupby after selecting products." ,priority = 9)
+     public void none(){
+        globelfilter.none();
+        globelfilter.checkboxteams();
+        globelfilter.dropdown();
+        globelfilter.clearalloption();
+        globelfilter.subprd();
      }
-
-
-
-
-
+     @Test(description = "verify catagory tool option  and apply button",priority = 10)
+     public void apply(){
+           globelfilter.catagory();
+           page.waitForTimeout(2000);
+           globelfilter.applocation();
+           globelfilter.infrastructure();
+           globelfilter.apply_button();
+     }
 
 
 
