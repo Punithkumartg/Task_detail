@@ -16,6 +16,7 @@ public class loginPage {
     public void clickonMicrosoftBtn(){
         page.getByRole(AriaRole.LINK,new Page.GetByRoleOptions()
                 .setName("Sign in using Microsoft")).click();
+
     }
     public void enterUsername(String username){
         page.getByPlaceholder("Email or phone").fill(username);

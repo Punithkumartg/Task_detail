@@ -36,6 +36,7 @@ public class testBase {
                 .setViewportSize(null));
         page = context.newPage();
         page.navigate(URL);
+
     }
 
     @AfterClass

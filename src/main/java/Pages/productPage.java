@@ -198,6 +198,7 @@ public class productPage {
                 tiers.click();
             }
         }
+
     }
 
     public Locator verifySubproductCreated() {

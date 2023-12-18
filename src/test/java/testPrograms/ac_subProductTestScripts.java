@@ -36,7 +36,6 @@ public class ac_subProductTestScripts extends testBase {
         loginpage = new loginPage(page);
         subproductpage = new subProductPage(page);
     }
-
     @Test(testName = "Verify when user login with valid credentiasls" +
             "then Home page is displayed",
             priority = 0)
