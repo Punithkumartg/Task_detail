@@ -202,15 +202,4 @@ else {
         page.waitForTimeout(2000);
 
     }
-
-
-
-
-
-
-
-
-
-
-
-          }
+}

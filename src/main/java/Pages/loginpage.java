@@ -10,7 +10,8 @@ public class loginpage  {
     private Browser browser;
     private BrowserContext context;
 
-    public loginpage (Page page) {
+    public loginpage (Page page)
+    {
         this.page = page;
     }
     public void clickonMicrosoftBtn(){

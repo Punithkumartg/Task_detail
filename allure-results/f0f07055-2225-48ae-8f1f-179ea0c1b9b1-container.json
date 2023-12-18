@@ -1,1 +1,0 @@
-{"uuid":"f0f07055-2225-48ae-8f1f-179ea0c1b9b1","name":"testprograms.login.setup","children":["45181aa3-5793-4002-acf1-761c0cd7c38e"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1702288556345,"stop":1702288556345}],"afters":[],"start":1702288556345,"stop":1702288556345}
