@@ -34,7 +34,7 @@ public class subProductPage {
         page.locator("#root").getByRole(AriaRole.BUTTON).nth(2).click();
     }
 
-    public void selctParentProduct(String productname) {
+    public void selctParentProduct(String productname)  {
         page.getByLabel("Parent Product").click();
         List<ElementHandle> products = page.querySelectorAll(".rc-virtual-list-holder-inner>div>div");
         for (ElementHandle parentProduct : products) {
@@ -112,10 +112,14 @@ public class subProductPage {
                 .setName("Next")).click();
     }
 
-    
+
     public void verifyCreatedPopupdisplayed() {
         Locator projectcreatedPopup = page.locator(".ant-message-notice-content");
         PlaywrightAssertions.assertThat(projectcreatedPopup).isVisible();
+    }
+    public void clikOnProceedBtn(){
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions()
+                .setName("Proceed")).click();
     }
     public void clickOnClosePopup() {
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions()

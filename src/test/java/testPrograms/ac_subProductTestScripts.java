@@ -65,7 +65,7 @@ public class ac_subProductTestScripts extends testBase {
     @ExtentReport(name = "sub product")
     @Test(testName = "Verify user is able to create sub products",
             priority = 2)
-    public void createSubproducts() {
+    public void createSubproducts()   {
         subproductpage.clickOnNewSubproductBtn();
         subproductpage.selctParentProduct(
                 productproperties.getProperty("Product_Dependency"));
@@ -85,6 +85,7 @@ public class ac_subProductTestScripts extends testBase {
         subproductpage.selectSubproductTier(
                 productproperties.getProperty("Subproduct_tier"));
         subproductpage.clivcOnSubprodtSaveBtn();
+        subproductpage.clikOnProceedBtn();
         subproductpage.clickOnClosePopup();
     }
 
