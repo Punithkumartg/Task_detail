@@ -286,7 +286,6 @@ public class ac_scansTestscripts extends testBase {
         assertThat(page.getByText("a few seconds ago").first()).isVisible();
         page.waitForSelector(".ant-table-tbody>tr:nth-child(2)>td:nth-child(10)>div>img[src='images/Failed.png']");
        String status=".ant-table-tbody>tr:nth-child(2)>td:nth-child(10)>div>img";
-
         String block="tbody tr:nth-child(2)>td:nth-child(9)";
         PlaywrightAssertions.assertThat(page.locator(block).getByText("T")).containsText("-");
         PlaywrightAssertions.assertThat(page.locator(block).getByText("D")).containsText("-");
