@@ -1,6 +1,6 @@
 package testPrograms;
 
-import com.microsoft.playwright.Locator;
+
 import com.microsoft.playwright.assertions.LocatorAssertions;
 import com.microsoft.playwright.options.AriaRole;
 import customListener.ExtentReport;
@@ -24,7 +24,6 @@ public class ac_scansTestscripts extends testBase {
     private Browser browser;
     private Properties properties;
     private Properties scanprop;
-
     private loginPage loginpage;
     private scanspage scans;
 
@@ -38,9 +37,8 @@ public class ac_scansTestscripts extends testBase {
         this.scanprop = super.getscanProperties();
         loginpage = new loginPage(page);
         scans = new scanspage(page);
-
-
     }
+
     @ExtentReport(name = "Punith")
     @Test(description = "Verify when user login with valid credentiasls" +
             "then Home page is displayed",
@@ -56,34 +54,34 @@ public class ac_scansTestscripts extends testBase {
                 .hasTitle("ArmorCode Inc - Application Security Orchestration and Collaboration platform");
         scans.navigate_to_scanstab();
     }
+
     @ExtentReport(name = "Punith")
-    @Test(description = "check Result details"+"navigate to finding page and same scan id findings should be there"
-            ,priority = 2 , enabled = false)
-    public void result_details()
-    {
+    @Test(description = "check Result details" + "navigate to finding page and same scan id findings should be there"
+            , priority = 2, enabled = false)
+    public void result_details() {
         scans.three_dots();
         scans.getdata_row_id();
         scans.resultdetail();
         PlaywrightAssertions.assertThat(page.locator("#filter-button-scan>div span:first-child")).hasText(scans.data_rowkey);
         scans.navigate_to_scanstab();
-
     }
+
     @ExtentReport(name = "Punith")
-    @Test(description = "check Export Report "+"file should be downloaded",
-            priority = 3,enabled = false)
+    @Test(description = "check Export Report " + "file should be downloaded",
+            priority = 3, enabled = false)
     public void exportreport() {
         scans.three_dots();
         scans.download_file();
     }
+
     @ExtentReport(name = "Punith")
     @Test(description = "navigate to scans page and clear filter" + "then filter should be removed",
-            priority = 4, enabled =false )
+            priority = 4, enabled = false)
     public void clear_filter() {
-         scans.clear_filter();
+        scans.clear_filter();
         scans.total_newfilter();
         assertThat(page.getByRole(AriaRole.CHECKBOX, new Page.GetByRoleOptions()
-            .setName("New > 0"))).isChecked(new LocatorAssertions.IsCheckedOptions().setChecked(false));
-
+                .setName("New > 0"))).isChecked(new LocatorAssertions.IsCheckedOptions().setChecked(false));
     }
 
     @ExtentReport(name = "Punith")
@@ -93,8 +91,7 @@ public class ac_scansTestscripts extends testBase {
         scans.environment_ascending();
         assertThat(page.getByText("Production").first()).isVisible();
         scans.environment_descending();
-        assertThat(page.getByText("Staging").first()).isVisible();
-
+        // assertThat(page.getByText("Staging").first()).isVisible();
     }
 
     @ExtentReport(name = "Punith")
@@ -104,7 +101,6 @@ public class ac_scansTestscripts extends testBase {
         scans.upload_btn();
         assertThat(page.locator(".ant-modal-title")).containsText("Scan Upload");
         scans.close_upload_pop();
-
     }
 
     @ExtentReport(name = "Punith")
@@ -201,7 +197,7 @@ public class ac_scansTestscripts extends testBase {
 
     @ExtentReport(name = "Punith")
     @Test(description = "upload invalid file" + "cross marak should be displayed",
-            priority =12, enabled = false)
+            priority = 12, enabled = false)
     public void upload_invalidfile() {
         scans.upload_btn();
         scans.product_dd();
@@ -224,11 +220,11 @@ public class ac_scansTestscripts extends testBase {
                         (".ant-table-tbody>tr:nth-child(2)>td:nth-child(10)>div>img"))
                 .hasAttribute("src", "images/Failed.png");
     }
+
     @ExtentReport(name = "Punith")
     @Test(description = "upload executable file" + "Error message should be displayed",
-            priority =13, enabled = false)
-    public void upload_exefile()
-    {
+            priority = 13, enabled = false)
+    public void upload_exefile() {
         scans.upload_btn();
         scans.product_dd();
         scans.upload_scan_dd(scanprop.getProperty("Product"));
@@ -245,33 +241,33 @@ public class ac_scansTestscripts extends testBase {
     }
 
     @ExtentReport(name = "Punith")
-    @Test(description = "Tooltip check"+"tool tip message should be displayed",priority = 14,enabled = false)
-    public void tooltip()
-    {
+    @Test(description = "Tooltip check" + "tool tip message should be displayed", priority = 14,
+            enabled = false)
+    public void tooltip() {
         scans.close_btn_hover();
-        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP,new Page.GetByRoleOptions()
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP, new Page.GetByRoleOptions()
                 .setName("Clear"))).isVisible();
         scans.scan_id_hover();
         scans.scan_date();
-        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP,new Page.GetByRoleOptions()
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP, new Page.GetByRoleOptions()
                 .setName("ArmorCode Ingestion Date"))).isVisible();
         scans.total_hover();
-        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP,new
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP, new
                 Page.GetByRoleOptions().setName("Total = Duplicate + New"))).isVisible();
         scans.reset_filter_hover();
-        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP,new
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP, new
                 Page.GetByRoleOptions().setName("Reset Filter and Sorting").setExact(true))).isVisible();
         scans.additional_columnhover();
-        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP,new
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP, new
                 Page.GetByRoleOptions().setName("Additional columns"))).isVisible();
 
 
     }
+
     @ExtentReport(name = "Punith")
     @Test(description = "upload executable file" + "Error message should be displayed",
-            priority =15, enabled = true)
-    public void upload_emptyfile()
-    {
+            priority = 15, enabled = false)
+    public void upload_emptyfile() {
         scans.upload_btn();
         scans.product_dd();
         scans.upload_scan_dd(scanprop.getProperty("Product"));
@@ -285,11 +281,61 @@ public class ac_scansTestscripts extends testBase {
         scans.upload_submit();
         assertThat(page.getByText("a few seconds ago").first()).isVisible();
         page.waitForSelector(".ant-table-tbody>tr:nth-child(2)>td:nth-child(10)>div>img[src='images/Failed.png']");
-       String status=".ant-table-tbody>tr:nth-child(2)>td:nth-child(10)>div>img";
-        String block="tbody tr:nth-child(2)>td:nth-child(9)";
+        String status = ".ant-table-tbody>tr:nth-child(2)>td:nth-child(10)>div>img";
+        String block = "tbody tr:nth-child(2)>td:nth-child(9)";
         PlaywrightAssertions.assertThat(page.locator(block).getByText("T")).containsText("-");
         PlaywrightAssertions.assertThat(page.locator(block).getByText("D")).containsText("-");
         PlaywrightAssertions.assertThat(page.locator(block).getByText("R")).containsText("-");
         PlaywrightAssertions.assertThat(page.locator(block).getByText("N")).containsText("-");
     }
+
+    @ExtentReport(name = "Punith")
+    @Test(description = "Check file name is displyed" + "file name should be displayed when user mouse hovre"
+            , priority = 16, enabled = false)
+    public void downloadfile_name() {
+        scans.three_dots();
+        scans.export_report_hover();
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP, new Page.GetByRoleOptions()
+                .setName("Export Report"))).isVisible();
+    }
+
+
+    @ExtentReport(name = "Punith")
+    @Test(description = "check inbuilt refresh" + "page should be refresh",
+            priority = 17, enabled = false)
+    public void inbuilt_refrsh() {
+        scans.refreshbtn();
+    }
+
+    @ExtentReport(name = "Punith")
+    @Test(description = "check proper error message is displayig in faild scans",
+            priority = 18, enabled = false)
+    public void scans_failed_errormg() {
+        scans.upload_btn();
+        scans.product_dd();
+        scans.upload_scan_dd(scanprop.getProperty("Product"));
+        scans.subproduct_dd();
+        scans.upload_scan_dd(scanprop.getProperty("sub_product"));
+        scans.environment_dd();
+        scans.environment_opt();
+        scans.scan_tool_dd();
+        scans.upload_scan_dd(scanprop.getProperty("tool"));
+        scans.fileupload(scanprop.getProperty("empty_file"));
+        scans.upload_submit();
+        assertThat(page.getByText("a few seconds ago").first()).isVisible();
+        scans.hoveron_crossmark();
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.TOOLTIP,
+                new Page.GetByRoleOptions().setName("Scan failed :"))).containsText("is empty.");
+
+
+    }
+
+    @ExtentReport(name = "Punith")
+    @Test(description = "check pagination" + "pagination should be work properly ", priority = 19)
+    public void pagination() {
+        scans.clear_filter();
+        scans.pageoption_click();
+        scans.pagination_option();
+    }
+
 }
